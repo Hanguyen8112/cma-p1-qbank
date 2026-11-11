@@ -1,0 +1,1040 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<title>CMA P1 QBank</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{
+  --bg:#f6f7f9;--card:#ffffff;--ink:#1c2230;--mute:#667085;--line:#e4e7ec;
+  --pri:#2f5bd3;--pri-soft:#e8eefc;--ok:#1f8a4c;--ok-soft:#e3f5ea;--bad:#c93a3a;--bad-soft:#fbe7e7;
+  --warn:#a86a00;--warn-soft:#fff4dc;--chip:#eef1f5;--shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --bg:#0f1218;--card:#171b23;--ink:#e6e9ef;--mute:#98a2b3;--line:#2a303b;
+  --pri:#7c9cff;--pri-soft:#1f2940;--ok:#4cc38a;--ok-soft:#15301f;--bad:#ff7a7a;--bad-soft:#3a1d1d;
+  --warn:#f0b54a;--warn-soft:#3a2e12;--chip:#222834;--shadow:none;}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0f1218;--card:#171b23;--ink:#e6e9ef;--mute:#98a2b3;--line:#2a303b;
+  --pri:#7c9cff;--pri-soft:#1f2940;--ok:#4cc38a;--ok-soft:#15301f;--bad:#ff7a7a;--bad-soft:#3a1d1d;
+  --warn:#f0b54a;--warn-soft:#3a2e12;--chip:#222834;--shadow:none;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
+.hwrap{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:700;font-size:16px;margin-right:auto}
+.brand small{font-weight:500;color:var(--mute);margin-left:6px}
+.pill{background:var(--chip);border-radius:999px;padding:3px 10px;font-size:13px;color:var(--mute);white-space:nowrap}
+.pill b{color:var(--ink)}
+.pill.sync{cursor:default}
+.pill.sync.on{color:var(--ok)}
+.pill.sync.err{color:var(--bad)}
+nav{max-width:980px;margin:0 auto;padding:0 16px;display:flex;gap:4px;overflow-x:auto}
+nav button{border:0;background:none;color:var(--mute);padding:9px 12px;font:inherit;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav button.on{color:var(--pri);border-bottom-color:var(--pri)}
+main{max-width:980px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow);margin-bottom:14px}
+h2{font-size:17px;margin:0 0 10px}
+h3{font-size:15px;margin:14px 0 8px}
+.mute{color:var(--mute)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{border-color:var(--pri)}
+.btn.pri{background:var(--pri);border-color:var(--pri);color:#fff}
+.btn.sm{padding:4px 10px;font-size:13px}
+.btn.danger{color:var(--bad)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;flex-wrap:wrap}
+.seg button{border:0;background:var(--card);color:var(--ink);padding:7px 12px;font:inherit;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--pri-soft);color:var(--pri);font-weight:700}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.unit{border:1px solid var(--line);border-radius:10px;padding:9px 10px;cursor:pointer;user-select:none;background:var(--card);position:relative}
+.unit.on{border-color:var(--pri);background:var(--pri-soft)}
+.unit .t{font-weight:700;font-size:13px}
+.unit .n{font-size:12px;color:var(--mute);line-height:1.35;min-height:32px}
+.unit .m{font-size:12px;color:var(--mute);margin-top:4px;display:flex;justify-content:space-between}
+.bar{height:5px;background:var(--chip);border-radius:3px;overflow:hidden;margin-top:5px;display:flex}
+.bar i{display:block;height:100%}
+.bar .g{background:var(--ok)}.bar .y{background:var(--pri)}.bar .r{background:var(--bad)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 10px;font-size:12.5px;cursor:pointer;color:var(--mute)}
+.chip.on{border-color:var(--pri);color:var(--pri);background:var(--pri-soft);font-weight:600}
+.modes{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.mode{border:1px solid var(--line);border-radius:10px;padding:10px;cursor:pointer}
+.mode.on{border-color:var(--pri);background:var(--pri-soft)}
+.mode b{display:block}
+.mode span{font-size:12.5px;color:var(--mute)}
+.mode em{font-style:normal;float:right;font-weight:700;color:var(--pri)}
+/* quiz */
+.qtop{position:sticky;top:calc(var(--hh,94px) + env(safe-area-inset-top,0px));z-index:10;background:var(--bg);padding:8px 0 10px}
+.prog{height:8px;background:var(--chip);border-radius:4px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--pri);transition:width .25s}
+.qmeta{display:flex;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--mute);margin-bottom:8px}
+.tag{background:var(--chip);border-radius:6px;padding:2px 8px}
+.tag.warn{background:var(--warn-soft);color:var(--warn)}
+.tag.re{background:var(--bad-soft);color:var(--bad)}
+.stem{white-space:pre-wrap;font-size:15.5px;margin:4px 0 14px}
+.stem .tx{white-space:pre-wrap}
+.stem .tw{overflow-x:auto;margin:8px 0 10px;white-space:normal}
+.stem table.dt{width:auto;min-width:min(100%,360px);border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums}
+.stem table.dt td,.stem table.dt th{border:1px solid var(--line);padding:5px 10px;text-align:left;vertical-align:top}
+.stem table.dt th{background:var(--chip);color:var(--ink);font-weight:600;font-size:13.5px}
+.stem table.dt td.n{text-align:right;white-space:nowrap}
+.stem table.dt tr:nth-child(even) td{background:color-mix(in srgb,var(--chip) 45%,transparent)}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:10px 12px;font:inherit;cursor:pointer;width:100%}
+.opt:hover:not(:disabled){border-color:var(--pri)}
+.opt .k{flex:0 0 26px;height:26px;border-radius:50%;background:var(--chip);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.opt.ok{border-color:var(--ok);background:var(--ok-soft)}
+.opt.ok .k{background:var(--ok);color:#fff}
+.opt.bad{border-color:var(--bad);background:var(--bad-soft)}
+.opt.bad .k{background:var(--bad);color:#fff}
+.opt:disabled{cursor:default}
+.res{margin-top:14px;border-radius:10px;padding:12px 14px;border:1px solid var(--line)}
+.res.ok{background:var(--ok-soft);border-color:transparent}
+.res.bad{background:var(--bad-soft);border-color:transparent}
+.res .hd{font-weight:700;margin-bottom:6px}
+.exp{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.exp p{margin:0 0 8px}
+.exp .src{font-size:13px;color:var(--mute);border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+details{margin-top:8px}
+summary{cursor:pointer;color:var(--pri);font-weight:600;font-size:13.5px}
+details div{margin-top:6px;font-size:14px;color:var(--mute);white-space:pre-wrap}
+.note{margin-top:8px;background:var(--warn-soft);color:var(--warn);border-radius:8px;padding:8px 10px;font-size:13px}
+.qnav{display:flex;justify-content:space-between;gap:8px;margin-top:14px;align-items:center}
+.kbd{font-size:12px;color:var(--mute)}
+.star{border:0;background:none;font-size:20px;cursor:pointer;color:var(--mute);padding:0 4px;line-height:1}
+.star.on{color:#e0a100}
+/* stats */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:right;vertical-align:middle}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--mute);font-weight:600;font-size:12.5px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.kpi{background:var(--chip);border-radius:10px;padding:10px 12px}
+.kpi b{display:block;font-size:22px}
+.kpi span{font-size:12.5px;color:var(--mute)}
+.goalbar{height:12px;background:var(--chip);border-radius:6px;overflow:hidden;margin:6px 0 2px}
+.goalbar i{display:block;height:100%;border-radius:6px}
+.gtab td.pos{color:var(--ok);font-weight:600}.gtab td.neg{color:var(--bad);font-weight:600}
+.gtab tr.today td{background:var(--pri-soft)}
+.gtab tr.future td{color:var(--mute)}
+.goalset{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.goalset input{width:80px;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font:inherit;background:var(--card);color:var(--ink)}
+.pill.goal.ok b{color:var(--ok)}.pill.goal.bad b{color:var(--bad)}
+.days{display:flex;align-items:flex-end;gap:4px;height:80px;margin-top:8px}
+.days div{flex:1;background:var(--pri-soft);border-radius:3px 3px 0 0;position:relative;min-height:2px}
+.days div i{position:absolute;bottom:0;left:0;right:0;background:var(--ok);border-radius:3px 3px 0 0}
+.dlab{display:flex;gap:4px;font-size:10.5px;color:var(--mute)}
+.dlab span{flex:1;text-align:center}
+.wl{border-bottom:1px solid var(--line);padding:10px 0}
+.wl .h{display:flex;gap:8px;align-items:baseline;cursor:pointer}
+.wl .h .s{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wl .b{display:none;margin-top:8px}
+.wl.open .b{display:block}
+input[type=search]{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;background:var(--card);color:var(--ink);min-width:220px;flex:1}
+select{border:1px solid var(--line);border-radius:8px;padding:7px 8px;font:inherit;background:var(--card);color:var(--ink)}
+.empty{text-align:center;color:var(--mute);padding:30px 10px}
+.sumbig{font-size:40px;font-weight:800;margin:6px 0}
+.hide{display:none!important}
+@media (max-width:600px){
+  body{font-size:14.5px}
+  .units{grid-template-columns:1fr 1fr}
+  .unit .n{display:none}
+  .hm{display:none}
+}
+</style>
+<style>
+#gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:16px}
+#gate form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;width:100%;max-width:360px;box-shadow:var(--shadow)}
+#gate h1{font-size:19px;margin:0 0 4px}
+#gate label{display:block;font-size:13px;color:var(--mute);margin:14px 0 4px}
+#gate input{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;background:var(--card);color:var(--ink)}
+#gate .btn{width:100%;margin-top:18px;padding:10px}
+#gate .msg{min-height:20px;margin-top:10px;font-size:13px;color:var(--bad)}
+.pill.who{cursor:pointer}
+</style>
+<div id="gate"><form id="gForm" autocomplete="on">
+  <h1>CMA Part 1 QBank</h1><div class="mute" style="font-size:13px">Đăng nhập để làm bài và lưu tiến độ</div>
+  <label for="gUser">Tài khoản</label><input id="gUser" name="username" autocomplete="username" required>
+  <label for="gPass">Mật khẩu</label><input id="gPass" name="password" type="password" autocomplete="current-password" required>
+  <button class="btn pri" id="gBtn" type="submit">Đăng nhập</button>
+  <div class="msg" id="gMsg"></div>
+</form></div>
+<header>
+  <div class="hwrap">
+    <div class="brand">CMA Part 1 QBank<small>Gleim 2024 + 2025</small></div>
+    <span class="pill">🔥 Chuỗi <b id="hStreak">0</b> ngày</span>
+    <span class="pill">Hôm nay <b id="hToday">0</b> câu</span>
+    <span class="pill">Đến hạn ôn <b id="hDue">0</b></span>
+    <span class="pill goal" id="hGoalPill" title="Lũy kế tháng này so với mục tiêu">Tháng này <b id="hGoal">0/0</b></span>
+    <span class="pill sync" id="hSync" title="Trạng thái lưu tiến độ">Đang kết nối…</span>
+  </div>
+  <nav id="nav">
+    <button data-tab="setup" class="on">Luyện tập</button>
+    <button data-tab="quiz">Làm bài</button>
+    <button data-tab="goal">Mục tiêu</button>
+    <button data-tab="stats">Thống kê</button>
+    <button data-tab="wrong">Sổ lỗi sai</button>
+    <button data-tab="data">Dữ liệu</button>
+  </nav>
+</header>
+<main>
+
+<!-- SETUP -->
+<section id="tab-setup">
+  <div class="card">
+    <div class="row" style="justify-content:space-between">
+      <h2 style="margin:0">1. Chọn Study Unit</h2>
+      <div class="row">
+        <button class="btn sm" id="selAll">Chọn tất cả (Mix)</button>
+        <button class="btn sm" id="selNone">Bỏ chọn</button>
+      </div>
+    </div>
+    <p class="mute" style="margin:6px 0 10px;font-size:13px">Chọn 1 unit để học riêng, hoặc chọn nhiều unit để trộn câu hỏi. Thanh màu: <span style="color:var(--ok)">■</span> đã thuộc · <span style="color:var(--pri)">■</span> đang học · <span style="color:var(--bad)">■</span> đang sai.</p>
+    <div class="units" id="units"></div>
+    <div id="subWrap" class="hide">
+      <h3>Lọc Subunit <span class="mute" style="font-weight:400;font-size:12.5px">(mặc định lấy hết)</span></h3>
+      <div class="chips" id="subs"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2. Chế độ học</h2>
+    <div class="modes" id="modes"></div>
+  </div>
+
+  <div class="card">
+    <h2>3. Tuỳ chọn</h2>
+    <div class="row" style="gap:18px">
+      <div><div class="mute" style="font-size:12.5px;margin-bottom:4px">Loại câu</div>
+        <div class="seg" id="segType"><button data-v="all">Tất cả</button><button data-v="0">Lý thuyết</button><button data-v="1">Tính toán</button></div></div>
+      <div><div class="mute" style="font-size:12.5px;margin-bottom:4px">Số câu mỗi lượt</div>
+        <div class="seg" id="segSize"><button data-v="10">10</button><button data-v="20">20</button><button data-v="30">30</button><button data-v="50">50</button><button data-v="100">100</button></div></div>
+      <div><div class="mute" style="font-size:12.5px;margin-bottom:4px">Thứ tự</div>
+        <div class="seg" id="segOrder"><button data-v="rand">Xáo trộn</button><button data-v="book">Theo sách</button></div></div>
+      <div><div class="mute" style="font-size:12.5px;margin-bottom:4px">Hiển thị mỗi lượt</div>
+        <div class="seg" id="segPack"><button data-v="1">Từng câu</button><button data-v="5">Gói 5 câu</button></div></div>
+    </div>
+    <div class="row" style="margin-top:16px;justify-content:space-between">
+      <span class="mute" id="avail"></span>
+      <button class="btn pri" id="start">Bắt đầu ▶</button>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="tab-quiz" class="hide">
+  <div id="quizEmpty" class="card empty">Chưa có lượt làm bài nào. Vào tab <b>Luyện tập</b> để chọn unit và bắt đầu.</div>
+  <div id="quizBox" class="hide">
+    <div class="qtop">
+      <div class="row" style="justify-content:space-between;margin-bottom:6px;font-size:13.5px">
+        <span>Đã trả lời <b id="qDone">0</b>/<b id="qTot">0</b></span>
+        <span>Đúng <b id="qOk">0</b> · Sai <b id="qBad">0</b></span>
+        <span class="mute" id="qLeft"></span>
+      </div>
+      <div class="prog"><i id="qProg" style="width:0"></i></div>
+    </div>
+    <div class="card" id="qCard"></div>
+  </div>
+  <div id="sumBox" class="card hide"></div>
+</section>
+
+<!-- GOAL -->
+<section id="tab-goal" class="hide">
+  <div class="card">
+    <div class="row" style="justify-content:space-between">
+      <h2 style="margin:0" id="gTitle">Mục tiêu tháng</h2>
+      <div class="row">
+        <button class="btn sm" id="gPrev" aria-label="Tháng trước">◀</button>
+        <button class="btn sm" id="gNow">Tháng này</button>
+        <button class="btn sm" id="gNext" aria-label="Tháng sau">▶</button>
+      </div>
+    </div>
+    <div class="goalset" style="margin:10px 0 4px">
+      <label for="gTarget" class="mute" style="font-size:13.5px">Mục tiêu mỗi ngày</label>
+      <input type="number" id="gTarget" min="1" step="1">
+      <span class="mute" style="font-size:13px">câu (tính mọi lượt trả lời: câu mới, câu ôn, câu hỏi lại)</span>
+    </div>
+    <div class="kpis" id="gKpis" style="margin-top:10px"></div>
+    <h3>Lũy kế so với mục tiêu</h3>
+    <div class="goalbar"><i id="gBar"></i></div>
+    <div class="mute" id="gBarLab" style="font-size:12.5px"></div>
+  </div>
+  <div class="card">
+    <h2>Chi tiết từng ngày</h2>
+    <div style="overflow-x:auto"><table class="gtab" id="gTable"></table></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="tab-stats" class="hide">
+  <div class="card"><h2>Tổng quan</h2><div class="kpis" id="kpis"></div>
+    <h3>14 ngày gần nhất <span class="mute" style="font-weight:400;font-size:12.5px">(cột nhạt: số câu đã làm · phần xanh: số câu đúng)</span></h3>
+    <div class="days" id="days"></div><div class="dlab" id="dlab"></div>
+  </div>
+  <div class="card"><h2>Theo Study Unit</h2>
+    <div style="overflow-x:auto"><table id="uTable"></table></div>
+  </div>
+</section>
+
+<!-- WRONG -->
+<section id="tab-wrong" class="hide">
+  <div class="card">
+    <div class="row" style="margin-bottom:10px">
+      <input type="search" id="wSearch" placeholder="Tìm trong câu hỏi…">
+      <select id="wUnit"></select>
+      <select id="wKind"><option value="wrong">Câu đã từng sai</option><option value="star">Câu đánh dấu ★</option></select>
+      <button class="btn pri sm" id="wDrill">Làm lại các câu này</button>
+    </div>
+    <div class="mute" id="wCount" style="font-size:13px"></div>
+    <div id="wList"></div>
+  </div>
+</section>
+
+<!-- DATA -->
+<section id="tab-data" class="hide">
+  <div class="card">
+    <h2>Lưu tiến độ</h2>
+    <p>Tiến độ lưu ở hai nơi: trong trình duyệt đang dùng, và trên claude.ai theo tài khoản của bạn. Mở trang này trên máy khác hoặc điện thoại (đã đăng nhập) sẽ thấy cùng tiến độ. Khi hai nơi khác nhau, mỗi câu lấy lần trả lời gần nhất.</p>
+    <p class="mute" id="syncInfo" style="font-size:13px"></p>
+    <p>Vẫn nên <b>xuất file sao lưu</b> thỉnh thoảng. Lịch sử từng lượt trả lời (file CSV) chỉ lưu trên trình duyệt này.</p>
+    <div class="row">
+      <button class="btn pri" id="exp">⬇ Xuất tiến độ (.json)</button>
+      <label class="btn">⬆ Nhập tiến độ<input type="file" id="imp" accept=".json,application/json" class="hide"></label>
+      <button class="btn" id="expCsv">⬇ Xuất lịch sử làm bài (.csv, mở bằng Excel)</button>
+    </div>
+    <p class="mute" id="impMsg" style="font-size:13px"></p>
+  </div>
+  <div class="card">
+    <h2>Cách hệ thống nhắc lại cách quãng hoạt động</h2>
+    <ul style="margin:0;padding-left:18px">
+      <li>Mỗi câu có một <b>hộp (box) 0–6</b>. Câu chưa làm ở box 0.</li>
+      <li>Trả lời <b>đúng</b>: lên 1 box, lần ôn tiếp theo cách <b>1 → 3 → 7 → 16 → 35 → 90 ngày</b>.</li>
+      <li>Trả lời <b>sai</b>: về box 1, đến hạn ôn lại ngay; trong lượt đang làm, câu đó còn được <b>hỏi lại sau vài câu</b>.</li>
+      <li>Câu sai nhiều lần được ưu tiên xuất hiện sớm hơn trong chế độ <b>Ôn thông minh</b>. Câu ở box ≥ 4 được tính là <b>đã thuộc</b>.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Xoá toàn bộ tiến độ</h2>
+    <button class="btn danger" id="reset">Xoá tiến độ</button>
+    <span class="mute" id="resetMsg" style="font-size:13px;margin-left:8px"></span>
+  </div>
+</section>
+</main>
+
+<script type="text/plain" id="appsrc">
+const DB = window.__DB;
+const KEY = 'cmaP1_qbank_srs_v1_' + window.__AUTH.u;
+const IV = [0,1,3,7,16,35,90]; // days per box
+const DAY = 864e5;
+const QM = {}; DB.q.forEach(q => QM[q.id] = q);
+const UNITS = Object.keys(DB.units).map(Number).sort((a,b)=>a-b);
+
+// ---------- state ----------
+let S;
+function blank(){ return {q:{}, days:{}, log:[], sel:{units:[], subs:null}, opt:{mode:'smart', type:'all', size:20, order:'rand'}}; }
+function load(){
+  try{ S = JSON.parse(localStorage.getItem(KEY)) || null; }catch(e){ S = null; }
+  if(!S){ S = blank(); }
+  load2();
+}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} queueCloud(); }
+
+// ---- cloud sync (claude.ai db, private per viewer) ----
+const cloud = {ref:null, timer:null, busy:false, again:false, last:null, state:'connecting'};
+function pack(){
+  const q = {};
+  for(const id in S.q){ const s=S.q[id]; if(!s) continue;
+    q[id] = [s.b|0, Math.round((s.due||0)/6e4), s.c|0, s.w|0, s.l?Math.round(s.l/6e4):0, s.lw?1:0, s.st?1:0]; }
+  return {v:1, q, days:S.days, sel:S.sel, opt:S.opt, at:Date.now()};
+}
+function unpack(o){
+  const q = {};
+  for(const id in (o.q||{})){ const a=o.q[id]; q[id] = {b:a[0], due:a[1]*6e4, c:a[2], w:a[3], l:a[4]?a[4]*6e4:null, lw:!!a[5], st:a[6]}; }
+  return {q, days:o.days||{}, sel:o.sel, opt:o.opt};
+}
+function mergeRemote(R){
+  let changed = 0;
+  for(const id in R.q){ const r=R.q[id], l=S.q[id];
+    if(!r.l && !r.st) continue;
+    if(!l){ S.q[id]=r; changed++; continue; }
+    const rl=r.l||0, ll=l.l||0;
+    if(rl>ll){ const st=l.st||r.st; S.q[id]={...r, st}; changed++; }
+    else if(r.st && !l.st && rl===ll){ l.st=r.st; }
+  }
+  for(const k in R.days){ const r=R.days[k], l=S.days[k]; if(!l || r.n>l.n){ S.days[k]={n:r.n,c:r.c}; changed++; } }
+  if((!S.sel.units.length) && R.sel && R.sel.units) S.sel = R.sel;
+  return changed;
+}
+function setSync(state, msg){
+  cloud.state = state; const el = $('#hSync'); if(!el) return;
+  el.className = 'pill sync' + (state==='on'?' on':state==='err'?' err':'');
+  el.textContent = state==='on' ? '☁ Đã đồng bộ' : state==='saving' ? '☁ Đang lưu…' : state==='err' ? '⚠ Chưa lưu lên máy chủ' : state==='local' ? 'Lưu trên máy này' : 'Đang kết nối…';
+  const i = $('#syncInfo'); if(i) i.textContent = msg || (state==='on' ? 'Đồng bộ tài khoản '+window.__AUTH.n+': đang hoạt động'+(cloud.last?' · lưu lần cuối '+new Date(cloud.last).toLocaleTimeString('vi-VN'):'') : state==='local' ? 'Đồng bộ: chưa kết nối được máy chủ, tiến độ tạm lưu trong trình duyệt và sẽ gửi lại khi có mạng.' : '');
+}
+function queueCloud(){ if(!cloud.ref) return; clearTimeout(cloud.timer); cloud.timer = setTimeout(pushCloud, 1500); }
+async function pushCloud(){
+  if(!cloud.ref) return;
+  if(cloud.busy){ cloud.again = true; return; }
+  cloud.busy = true; setSync('saving');
+  try{ await cloud.ref.set(pack()); cloud.last = Date.now(); setSync('on'); }
+  catch(e){
+    const code = e && e.code;
+    if(code==='unavailable' || code==='err' || !code){ setTimeout(queueCloud, 2000 + Math.random()*2000); setSync('err'); }
+    else if(code==='invalid_argument' || code==='revoked' || code==='not_granted'){ cloud.ref = null; setSync('local'); }
+    else setSync('err', 'Lỗi đồng bộ: '+(code||'không rõ')+'. Tiến độ vẫn lưu trong trình duyệt.');
+  }
+  cloud.busy = false;
+  if(cloud.again){ cloud.again = false; queueCloud(); }
+}
+async function initCloud(){
+  // Lưu tiến độ theo tài khoản qua Apps Script (Google Sheet)
+  const ref = { set: async (p) => { const r = await api('set', {data: {...p, log: S.log.slice(-6000)}}); if(!r.ok) throw {code: r.code==='auth' ? 'revoked' : 'err'}; } };
+  try{
+    const r = await api('get');
+    if(!r.ok){ setSync(r.code==='auth' ? 'local' : 'err', r.code==='auth' ? 'Sai tài khoản hoặc mật khẩu khi đồng bộ. Hãy đăng xuất rồi đăng nhập lại.' : undefined); if(r.code==='auth') return; }
+    cloud.ref = ref;
+    if(r.ok && r.data){
+      const fresh = !Object.keys(S.q).length;
+      let n = mergeRemote(unpack(r.data));
+      if(Array.isArray(r.data.log) && r.data.log.length){
+        const seen = new Set(S.log.map(x => x[0]+'|'+x[2]));
+        r.data.log.forEach(x => { if(!seen.has(x[0]+'|'+x[2])){ S.log.push(x); n++; } });
+        S.log.sort((a,b) => a[2]-b[2]);
+      }
+      if(fresh && r.data.opt) S.opt = {...S.opt, ...r.data.opt};
+      try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){}
+      refreshView();
+    }
+    await pushCloud();
+  }catch(e){ cloud.ref = ref; setSync('err'); setTimeout(initCloud, 15000); }
+}
+function refreshView(){
+  updateHeader();
+  const vis = [...document.querySelectorAll('main > section')].find(s=>!s.classList.contains('hide'));
+  if(!vis) return;
+  if(vis.id==='tab-setup') renderSetup(); else if(vis.id==='tab-stats') renderStats(); else if(vis.id==='tab-wrong') renderWrong(); else if(vis.id==='tab-goal') renderGoal();
+}
+function cleanSeed(){ for(const id in S.q){ const s=S.q[id]; if(s && !s.l && !s.st) delete S.q[id]; } }
+function seed(){ // lịch sử luyện tập cũ trong Excel (cột Practice)
+  DB.q.forEach(q => { if(q.h && q.h.length){ const last=q.h[q.h.length-1];
+    S.q[q.id] = {b:last?2:1, due:Date.now()+(last?IV[2]*DAY:0), c:q.h.filter(x=>x).length, w:q.h.filter(x=>!x).length, l:null, lw:!last, st:0}; } });
+}
+const st = id => S.q[id] || null;
+const dkey = (t=Date.now()) => { const d=new Date(t); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
+function isDue(id){ const s=st(id); return s && s.b>0 && s.due <= endOfToday(); }
+function endOfToday(){ const d=new Date(); d.setHours(23,59,59,999); return d.getTime(); }
+function mastered(id){ const s=st(id); return s && s.b>=4; }
+
+function record(id, ok){
+  const s = S.q[id] || (S.q[id] = {b:0,due:0,c:0,w:0,l:null,lw:false,st:0});
+  const now = Date.now();
+  if(ok){ s.c++; s.b = Math.min(6, s.b+1); s.due = now + IV[s.b]*DAY; s.lw=false; }
+  else { s.w++; s.b = 1; s.due = now; s.lw=true; }
+  s.l = now;
+  const k = dkey(now); const d = S.days[k] || (S.days[k] = {n:0,c:0}); d.n++; if(ok) d.c++;
+  S.log.push([id, ok?1:0, now]); if(S.log.length>20000) S.log = S.log.slice(-20000);
+  save();
+}
+function streak(){
+  let n=0, t=Date.now();
+  if(!S.days[dkey(t)]) t -= DAY; // hôm nay chưa học thì tính đến hôm qua
+  while(S.days[dkey(t)]){ n++; t -= DAY; }
+  return n;
+}
+
+// ---------- helpers ----------
+const $ = s => document.querySelector(s);
+const esc = s => String(s??'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// Hiển thị số liệu trong đề dạng bảng
+const NUMT = x => /^\(?-?\$?\d[\d,]*(\.\d+)?\)?%?$/.test(x) || /^\$?\.\d+%?$/.test(x);
+const MONTH = /^(January|February|March|April|May|June|July|August|September|October|November|December)$/;
+function parseRow(l, pipeOnly){
+  const s = l.trim();
+  if(!s || /^[•«*\-]/.test(s)) return null;
+  if((s.includes(' | ') || /^\| /.test(s)) && !/^\(.*\)$/.test(s)) return {pipe:true, cells:(' '+s+' ').split(' | ').map(x=>x.trim())};
+  if(pipeOnly) return null;
+  const hm = s.match(/^(?:(?:Year|Quarter|Month|Week|Batch|Period)\s+\d+\s*){2,}$/);
+  if(hm) return {pipe:false, head:true, cells:['', ...s.match(/(?:Year|Quarter|Month|Week|Batch|Period)\s+\d+/g)]};
+  let toks = s.split(/\s+/);
+  if(toks.length>2 && /^[a-zA-Z|»«©]{1,2}$/.test(toks[toks.length-1]) && NUMT(toks[toks.length-2])) toks.pop();
+  const nums = [];
+  while(toks.length && NUMT(toks[toks.length-1])) nums.unshift(toks.pop());
+  if(toks.length && toks[toks.length-1]==='$' && nums.length){ toks.pop(); nums[0]='$'+nums[0]; }
+  if(!nums.length || nums.length>6) return null;
+  if(!toks.length){ return nums.length>=2 ? {pipe:false, cells:['', ...nums]} : null; }
+  const label = toks.join(' ');
+  if(label.length>80 || /[.?:;]$/.test(label) || MONTH.test(label)) return null;
+  return {pipe:false, cells:[label, ...nums]};
+}
+function stemHTML(s){
+  const lines = String(s??'').split('\n'); const out = []; let grp = [], txt = [];
+  const flushTxt = () => { const x = txt.join('\n').replace(/^\n+|\n+$/g,''); if(x) out.push('<div class="tx">'+esc(x)+'</div>'); txt=[]; };
+  const flushGrp = () => {
+    if(!grp.length) return;
+    if(grp.filter(g=>!g.head).length<2){ txt.push(...grp.map(g=>g.raw)); grp=[]; return; }
+    flushTxt();
+    const ncol = Math.max(...grp.map(g=>g.cells.length));
+    const noLabel = grp.every(g=>!g.cells[0]);
+    const isNumRow = g => g.cells.some(c => NUMT(c.replace(/\s/g,'')) || /^\$\s*\d/.test(c) || c==='N/A' || /^[-–—]$/.test(c));
+    let firstNum = grp.findIndex(isNumRow); if(firstNum<0) firstNum = 0;
+    let h = '<div class="tw"><table class="dt">';
+    grp.forEach((g,k) => {
+      const head = g.head || (g.pipe && k < firstNum);
+      let cells = g.cells.slice(); while(cells.length<ncol) cells.splice(1,0,'');
+      if(noLabel) cells = cells.slice(1);
+      h += '<tr>' + cells.map((c,ci) => head ? '<th>'+esc(c)+'</th>' : '<td'+((ci>0||noLabel) && (NUMT(c.replace(/\s/g,'')) || /^\$\s*\d/.test(c) || /^(N\/A|NA|[-–—]+)$/.test(c)) ? ' class="n"' : '')+'>'+esc(c)+'</td>').join('') + '</tr>';
+    });
+    out.push(h+'</table></div>'); grp=[];
+  };
+  const pipeOnly = lines.some(l => l.includes(' | ') && !/^\(.*\)$/.test(l.trim()));
+  for(const l of lines){
+    const r = parseRow(l, pipeOnly);
+    if(r && (!grp.length || grp[0].pipe===r.pipe)){ r.raw=l; grp.push(r); continue; }
+    if(!r && grp.length && !grp[grp.length-1].pipe && grp[grp.length-1].cells[0] && /^[a-z][a-z\-() ]{0,30}$/.test(l.trim())){
+      const g = grp[grp.length-1]; g.cells[0] += ' ' + l.trim(); g.raw += '\n' + l; continue;
+    }
+    flushGrp();
+    if(r){ r.raw=l; grp.push(r); continue; }
+    txt.push(l);
+  }
+  flushGrp(); flushTxt();
+  return out.join('');
+}
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function unitStats(ids){
+  let seen=0, mas=0, wr=0, due=0, c=0, w=0;
+  ids.forEach(id => { const s=st(id); if(s && (s.c+s.w)>0){ seen++; c+=s.c; w+=s.w; if(s.b>=4) mas++; if(s.lw) wr++; } if(isDue(id)) due++; });
+  return {n:ids.length, seen, mas, wr, due, acc: (c+w)? c/(c+w) : null};
+}
+const byUnit = {}; UNITS.forEach(u => byUnit[u] = DB.q.filter(q=>q.u===u).map(q=>q.id));
+
+function updateHeader(){
+  $('#hStreak').textContent = streak();
+  $('#hToday').textContent = (S.days[dkey()]||{n:0}).n;
+  $('#hDue').textContent = DB.q.filter(q=>isDue(q.id)).length;
+  const g = goalMonth(new Date()); const pill = $('#hGoalPill');
+  $('#hGoal').textContent = g.done.toLocaleString('en-US') + '/' + g.targetToDate.toLocaleString('en-US');
+  pill.classList.toggle('ok', g.done>=g.targetToDate); pill.classList.toggle('bad', g.done<g.targetToDate);
+  pill.title = g.done>=g.targetToDate ? 'Đang vượt mục tiêu ' + (g.done-g.targetToDate) + ' câu' : 'Còn thiếu ' + (g.targetToDate-g.done) + ' câu so với mục tiêu tính đến hôm nay';
+}
+// ---------- mục tiêu theo tháng ----------
+function goalPerDay(){ const v = +((S.opt||{}).goal); return v>0 ? Math.round(v) : 50; }
+function goalMonth(ref){
+  const y = ref.getFullYear(), m = ref.getMonth(), per = goalPerDay();
+  const nDays = new Date(y, m+1, 0).getDate();
+  const now = new Date(); const curKey = dkey();
+  const isCur = y===now.getFullYear() && m===now.getMonth();
+  const isPast = new Date(y, m+1, 1) <= new Date(now.getFullYear(), now.getMonth(), 1) && !isCur;
+  const elapsed = isCur ? now.getDate() : (isPast ? nDays : 0);
+  const rows = []; let cumD = 0, cumT = 0, done = 0;
+  for(let d=1; d<=nDays; d++){
+    const k = y + '-' + String(m+1).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+    const rec = S.days[k] || {n:0,c:0};
+    const future = d > elapsed;
+    if(!future){ cumD += rec.n; cumT += per; done += rec.n; }
+    rows.push({d, k, n:rec.n, c:rec.c, future, today:k===curKey, cumD, cumT});
+  }
+  const targetToDate = per*elapsed, monthTarget = per*nDays;
+  const remainDays = nDays - elapsed;
+  const todayN = isCur ? (S.days[curKey]||{n:0}).n : 0;
+  return {y, m, per, nDays, elapsed, rows, done, targetToDate, monthTarget, remainDays, todayN, isCur};
+}
+let goalRef = new Date();
+function renderGoal(){
+  const g = goalMonth(goalRef);
+  $('#gTitle').textContent = 'Mục tiêu tháng ' + (g.m+1) + '/' + g.y;
+  $('#gTarget').value = g.per;
+  const gap = g.done - g.targetToDate;
+  const leftMonth = Math.max(0, g.monthTarget - g.done);
+  const needPerDay = g.isCur ? (g.remainDays>0 ? Math.ceil(Math.max(0, g.monthTarget - g.done - Math.max(0, g.per - g.todayN)) / g.remainDays) : 0) : 0;
+  const k = [
+    ['Đã làm trong tháng', g.done.toLocaleString('en-US')],
+    ['Mục tiêu tính đến ' + (g.isCur ? 'hôm nay' : 'cuối kỳ') + ' (' + g.elapsed + ' ngày × ' + g.per + ')', g.targetToDate.toLocaleString('en-US')],
+    [gap>=0 ? 'Đang vượt' : 'Còn thiếu', '<i style="font-style:normal;color:' + (gap>=0?'var(--ok)':'var(--bad)') + '">' + Math.abs(gap).toLocaleString('en-US') + '</i>'],
+  ];
+  if(g.isCur){
+    k.push(['Hôm nay', g.todayN + ' / ' + g.per + (g.todayN<g.per ? ' <small style="font-size:13px;color:var(--mute)">(còn ' + (g.per-g.todayN) + ')</small>' : ' ✓')]);
+    k.push(['Mục tiêu cả tháng', g.monthTarget.toLocaleString('en-US') + ' <small style="font-size:13px;color:var(--mute)">(còn ' + leftMonth.toLocaleString('en-US') + ')</small>']);
+    if(g.remainDays>0) k.push(['Để kịp cả tháng: TB mỗi ngày còn lại (sau khi xong hôm nay)', needPerDay.toLocaleString('en-US')]);
+  }
+  $('#gKpis').innerHTML = k.map(([l,v])=>`<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join('');
+  const pct = g.targetToDate ? Math.min(100, g.done/g.targetToDate*100) : 0;
+  $('#gBar').style.width = pct + '%';
+  $('#gBar').style.background = g.done>=g.targetToDate ? 'var(--ok)' : (pct>=80 ? 'var(--warn)' : 'var(--bad)');
+  $('#gBarLab').textContent = g.targetToDate ? (g.done.toLocaleString('en-US') + ' / ' + g.targetToDate.toLocaleString('en-US') + ' câu (' + Math.round(g.done/g.targetToDate*100) + '%)') : 'Tháng này chưa bắt đầu.';
+  const wd = ['CN','T2','T3','T4','T5','T6','T7'];
+  let h = '<tr><th>Ngày</th><th>Đã làm</th><th class="hm">Đúng</th><th>Mục tiêu</th><th>Chênh lệch ngày</th><th>Lũy kế làm</th><th>Lũy kế mục tiêu</th><th>Thiếu/vượt lũy kế</th></tr>';
+  g.rows.forEach(r => {
+    const dt = new Date(g.y, g.m, r.d);
+    const lab = String(r.d).padStart(2,'0') + '/' + String(g.m+1).padStart(2,'0') + ' <span class="mute">' + wd[dt.getDay()] + '</span>';
+    if(r.future){ h += `<tr class="future"><td>${lab}</td><td>–</td><td class="hm">–</td><td>${g.per}</td><td></td><td></td><td></td><td></td></tr>`; return; }
+    const dd = r.n - g.per, cg = r.cumD - r.cumT;
+    const sg = v => (v>0?'+':'') + v.toLocaleString('en-US');
+    h += `<tr class="${r.today?'today':''}"><td>${lab}${r.today?' <b style="color:var(--pri)">• hôm nay</b>':''}</td><td><b>${r.n}</b></td><td class="hm">${r.n?Math.round(r.c/r.n*100)+'%':'–'}</td><td>${g.per}</td><td class="${dd>=0?'pos':'neg'}">${sg(dd)}</td><td>${r.cumD.toLocaleString('en-US')}</td><td>${r.cumT.toLocaleString('en-US')}</td><td class="${cg>=0?'pos':'neg'}">${sg(cg)}</td></tr>`;
+  });
+  $('#gTable').innerHTML = h;
+}
+$('#gPrev').onclick = () => { goalRef = new Date(goalRef.getFullYear(), goalRef.getMonth()-1, 1); renderGoal(); };
+$('#gNext').onclick = () => { goalRef = new Date(goalRef.getFullYear(), goalRef.getMonth()+1, 1); renderGoal(); };
+$('#gNow').onclick = () => { goalRef = new Date(); renderGoal(); };
+$('#gTarget').onchange = () => { const v = Math.round(+$('#gTarget').value); if(v>0){ S.opt.goal = v; save(); renderGoal(); updateHeader(); } };
+
+// ---------- tabs ----------
+function show(tab){
+  document.querySelectorAll('#nav button').forEach(b => b.classList.toggle('on', b.dataset.tab===tab));
+  document.querySelectorAll('main > section').forEach(s => s.classList.toggle('hide', s.id!=='tab-'+tab));
+  if(tab==='setup') renderSetup();
+  if(tab==='stats') renderStats();
+  if(tab==='goal') renderGoal();
+  if(tab==='wrong') renderWrong();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('#nav button').forEach(b => b.onclick = () => show(b.dataset.tab));
+
+// ---------- setup ----------
+const MODES = [
+  {k:'smart', t:'Ôn thông minh (SRS)', d:'Câu đến hạn ôn và câu hay sai trước, sau đó thêm câu mới'},
+  {k:'new', t:'Chỉ câu mới', d:'Những câu chưa làm lần nào'},
+  {k:'wrong', t:'Chỉ câu đang sai', d:'Câu trả lời sai ở lần gần nhất'},
+  {k:'due', t:'Chỉ câu đến hạn', d:'Câu đã học, tới lịch ôn lại'},
+  {k:'star', t:'Câu đánh dấu ★', d:'Những câu bạn đã gắn sao'},
+  {k:'all', t:'Ngẫu nhiên / toàn bộ', d:'Lấy từ toàn bộ câu trong phạm vi đã chọn'},
+];
+function scopeIds(){
+  const us = new Set(S.sel.units);
+  return DB.q.filter(q => us.has(q.u) && (!S.sel.subs || S.sel.subs.includes(q.s)) && (S.opt.type==='all' || String(q.t)===S.opt.type)).map(q=>q.id);
+}
+function poolFor(mode, ids){
+  const now = endOfToday();
+  switch(mode){
+    case 'new': return ids.filter(id => !st(id) || (st(id).c+st(id).w)===0);
+    case 'wrong': return ids.filter(id => st(id) && st(id).lw);
+    case 'due': return ids.filter(isDue);
+    case 'star': return ids.filter(id => st(id) && st(id).st);
+    case 'all': return ids.slice();
+    case 'smart': {
+      const due = ids.filter(isDue).sort((a,b)=>{ const A=st(a),B=st(b); return (B.lw-A.lw) || (B.w-A.w) || (A.due-B.due); });
+      const nw = ids.filter(id => !st(id) || (st(id).c+st(id).w)===0);
+      return due.concat(nw);
+    }
+  }
+  return [];
+}
+function renderSetup(){
+  const U = $('#units'); U.innerHTML='';
+  UNITS.forEach(u => {
+    const s = unitStats(byUnit[u]);
+    const el = document.createElement('div');
+    el.className = 'unit' + (S.sel.units.includes(u)?' on':'');
+    const g=s.mas/s.n*100, r=s.wr/s.n*100, y=Math.max(0,(s.seen-s.mas-s.wr)/s.n*100);
+    el.innerHTML = `<div class="t">SU ${u}</div><div class="n">${esc(DB.units[u])}</div>
+      <div class="m"><span>${s.seen}/${s.n} đã làm</span><span>${s.due?('⏰ '+s.due):''}</span></div>
+      <div class="bar"><i class="g" style="width:${g}%"></i><i class="y" style="width:${y}%"></i><i class="r" style="width:${r}%"></i></div>`;
+    el.onclick = () => { const i=S.sel.units.indexOf(u); if(i>=0) S.sel.units.splice(i,1); else S.sel.units.push(u); S.sel.units.sort((a,b)=>a-b); S.sel.subs=null; save(); renderSetup(); };
+    U.appendChild(el);
+  });
+  // subunits
+  const subs = Object.keys(DB.subs).filter(k => S.sel.units.includes(+k.split('.')[0])).sort((a,b)=>{const [a1,a2]=a.split('.').map(Number),[b1,b2]=b.split('.').map(Number);return a1-b1||a2-b2;});
+  $('#subWrap').classList.toggle('hide', !subs.length);
+  const C = $('#subs'); C.innerHTML='';
+  subs.forEach(k => {
+    const n = DB.q.filter(q=>q.s===k).length; if(!n) return;
+    const on = !S.sel.subs || S.sel.subs.includes(k);
+    const b = document.createElement('button'); b.className='chip'+(on?' on':'');
+    b.textContent = `${k} ${DB.subs[k]} (${n})`; b.title = DB.subs[k];
+    b.onclick = () => { let cur = S.sel.subs ? S.sel.subs.slice() : subs.slice(); const i=cur.indexOf(k); if(i>=0) cur.splice(i,1); else cur.push(k); S.sel.subs = cur.length===subs.length?null:cur; save(); renderSetup(); };
+    C.appendChild(b);
+  });
+  // modes
+  const ids = scopeIds();
+  const M = $('#modes'); M.innerHTML='';
+  MODES.forEach(m => {
+    const n = poolFor(m.k, ids).length;
+    const el = document.createElement('div'); el.className='mode'+(S.opt.mode===m.k?' on':'');
+    el.innerHTML = `<em>${n}</em><b>${m.t}</b><span>${m.d}</span>`;
+    el.onclick = () => { S.opt.mode=m.k; save(); renderSetup(); };
+    M.appendChild(el);
+  });
+  segSet('#segType', S.opt.type); segSet('#segSize', String(S.opt.size)); segSet('#segOrder', S.opt.order); segSet('#segPack', String(packN()));
+  const n = poolFor(S.opt.mode, ids).length;
+  $('#avail').textContent = S.sel.units.length ? `Phạm vi: ${ids.length} câu · Có ${n} câu phù hợp chế độ này · Lượt này: ${Math.min(n,S.opt.size)} câu` : 'Hãy chọn ít nhất 1 Study Unit.';
+  $('#start').disabled = !n || !S.sel.units.length;
+  updateHeader();
+}
+function segSet(sel, v){ document.querySelectorAll(sel+' button').forEach(b => b.classList.toggle('on', b.dataset.v===v)); }
+function segBind(sel, key, num){ document.querySelectorAll(sel+' button').forEach(b => b.onclick = () => { S.opt[key] = num?+b.dataset.v:b.dataset.v; save(); renderSetup(); }); }
+segBind('#segType','type'); segBind('#segSize','size',true); segBind('#segOrder','order'); segBind('#segPack','pack',true);
+$('#selAll').onclick = () => { S.sel.units = UNITS.slice(); S.sel.subs=null; save(); renderSetup(); };
+$('#selNone').onclick = () => { S.sel.units = []; S.sel.subs=null; save(); renderSetup(); };
+$('#start').onclick = () => {
+  const ids = scopeIds(); let pool = poolFor(S.opt.mode, ids);
+  if(S.opt.mode==='smart'){ // giữ ưu tiên câu đến hạn, xáo phần còn lại
+    const due = pool.filter(isDue), nw = pool.filter(id=>!isDue(id));
+    pool = due.slice(0,S.opt.size).concat(S.opt.order==='rand'?shuffle(nw):nw).slice(0,S.opt.size);
+    if(S.opt.order==='rand') shuffle(pool);
+  } else {
+    pool = S.opt.order==='rand' ? shuffle(pool).slice(0,S.opt.size) : pool.slice(0,S.opt.size);
+  }
+  if(S.opt.order==='book') pool.sort((a,b)=>a-b);
+  startQuiz(pool);
+};
+
+// ---------- quiz ----------
+let Z = null; // {queue:[{id,re}], i, done, ok, bad, first:{id:ok}, total}
+function startQuiz(ids){
+  Z = {queue: ids.map(id=>({id, re:false})), i:0, total:ids.length, done:0, ok:0, bad:0, first:{}, answered:false};
+  $('#sumBox').classList.add('hide'); $('#quizBox').classList.remove('hide'); $('#quizEmpty').classList.add('hide');
+  show('quiz'); renderQ();
+}
+function renderQ1(){
+  const it = Z.queue[Z.i]; const q = QM[it.id]; const s = st(q.id);
+  $('#qDone').textContent = Z.done; $('#qTot').textContent = Z.total; $('#qOk').textContent = Z.ok; $('#qBad').textContent = Z.bad;
+  $('#qProg').style.width = (Z.done/Z.total*100)+'%';
+  const left = Z.queue.length - Z.i; $('#qLeft').textContent = `Còn ${left} lượt hỏi`;
+  const tags = [`<span class="tag">SU ${q.s} · ${esc(DB.subs[q.s]||'')}</span>`, (q.src ? `<span class="tag" style="background:var(--ok-soft);color:var(--ok)">Mới · Gleim 2025 · câu ${q.n-1000}</span>` : `<span class="tag">Câu ${q.n}</span>`), `<span class="tag">${q.t?'Tính toán':'Lý thuyết'}</span>`];
+  if(it.re) tags.push('<span class="tag re">Hỏi lại câu vừa sai</span>');
+  else if(s && s.lw) tags.push('<span class="tag re">Lần trước sai</span>');
+  if(s && (s.c+s.w)) tags.push(`<span class="tag">Box ${s.b} · ✓${s.c} ✗${s.w}</span>`);
+  if(q.f) tags.push('<span class="tag warn">⚠ Cần đối chiếu</span>');
+  const opts = ['A','B','C','D'].map((k,i) => `<button class="opt" data-k="${k}"><span class="k">${k}</span><span>${q.o?esc(q.o[i]):'<span class="mute">(xem phương án trong đề)</span>'}</span></button>`).join('');
+  $('#qCard').innerHTML = `
+    <div class="row" style="justify-content:space-between;align-items:flex-start">
+      <div class="qmeta">${tags.join('')}</div>
+      <button class="star ${s&&s.st?'on':''}" id="starBtn" title="Đánh dấu câu này">★</button>
+    </div>
+    ${stemBlock(q)}
+    <div class="opts">${opts}</div>
+    <div id="after"></div>
+    <div class="qnav"><span class="kbd">Phím tắt: 1–4 để chọn · Enter để sang câu</span>
+      <button class="btn pri" id="nextBtn" disabled>Câu tiếp ▶</button></div>`;
+  Z.answered = false;
+  document.querySelectorAll('.opt').forEach(b => b.onclick = () => answer(b.dataset.k));
+  $('#starBtn').onclick = () => { const s2 = S.q[q.id] || (S.q[q.id]={b:0,due:0,c:0,w:0,l:null,lw:false,st:0}); s2.st = s2.st?0:1; save(); $('#starBtn').classList.toggle('on', !!s2.st); };
+  $('#nextBtn').onclick = next;
+}
+function explainHTML(q){
+  let h = `<div class="exp">`;
+  if(q.vn) h += `<p><b>Giải thích:</b> ${esc(q.vn)}</p>`;
+  if(q.en) h += q.vn ? `<details><summary>Gleim explanation (EN)</summary><div>${esc(q.en)}</div></details>` : `<p><b>Gleim explanation:</b> ${esc(q.en)}</p>`;
+  if(q.fn) h += `<p style="margin-top:8px"><b>Ghi chú của Fit:</b> ${esc(q.fn)}</p>`;
+  h += `<div class="src">📖 Dẫn chứng: ${esc(q.c)}</div>`;
+  if(q.f) h += `<div class="note">⚠ ${esc(q.f)}</div>`;
+  return h + `</div>`;
+}
+function answer1(k){
+  if(Z.answered) return; Z.answered = true;
+  const it = Z.queue[Z.i]; const q = QM[it.id]; const ok = k===q.a;
+  document.querySelectorAll('.opt').forEach(b => { b.disabled = true; if(b.dataset.k===q.a) b.classList.add('ok'); if(b.dataset.k===k && !ok) b.classList.add('bad'); });
+  record(q.id, ok);
+  if(!(q.id in Z.first)){ Z.first[q.id] = ok; Z.done++; ok ? Z.ok++ : Z.bad++; }
+  if(!ok){ // hỏi lại sau 3-5 câu (tối đa 1 lần mỗi lượt)
+    const reCount = Z.queue.filter(x=>x.id===q.id).length;
+    if(reCount < 2){ const pos = Math.min(Z.queue.length, Z.i + 3 + Math.floor(Math.random()*3)); Z.queue.splice(pos, 0, {id:q.id, re:true}); }
+  }
+  $('#after').innerHTML = `<div class="res ${ok?'ok':'bad'}"><div class="hd">${ok?'✓ Chính xác':'✗ Chưa đúng · Đáp án đúng: '+q.a}</div>${ok?'':'<span style="font-size:13px">Câu này sẽ được hỏi lại sau vài câu và đưa vào lịch ôn sớm.</span>'}</div>` + explainHTML(q);
+  $('#qDone').textContent = Z.done; $('#qOk').textContent = Z.ok; $('#qBad').textContent = Z.bad;
+  $('#qProg').style.width = (Z.done/Z.total*100)+'%';
+  $('#nextBtn').disabled = false; $('#nextBtn').textContent = (Z.i+1 < Z.queue.length) ? 'Câu tiếp ▶' : 'Xem kết quả ▶';
+  updateHeader();
+}
+function next1(){
+  if(!Z.answered) return;
+  Z.i++;
+  if(Z.i >= Z.queue.length) return finish();
+  renderQ(); window.scrollTo({top:0});
+}
+function finish(){
+  $('#quizBox').classList.add('hide');
+  const pct = Z.total ? Math.round(Z.ok/Z.total*100) : 0;
+  const msg = pct>=90 ? 'Rất tốt. Phần này bạn nắm chắc rồi, để hệ thống giãn lịch ôn.' : pct>=75 ? 'Khá tốt, đạt mức an toàn của đề CMA. Xem lại các câu sai bên dưới.' : pct>=60 ? 'Tạm ổn nhưng còn hổng. Nên đọc lại các subunit có câu sai rồi làm lại.' : 'Chưa vững. Nên quay lại sách Gleim các subunit bên dưới trước khi làm tiếp.';
+  const wrongIds = Object.keys(Z.first).filter(id => !Z.first[id]).map(Number);
+  const subsBad = {}; wrongIds.forEach(id => { const s=QM[id].s; subsBad[s]=(subsBad[s]||0)+1; });
+  const sb = Object.entries(subsBad).sort((a,b)=>b[1]-a[1]).map(([k,n])=>`<span class="tag re">${k} ${esc(DB.subs[k]||'')} · ${n} sai</span>`).join(' ');
+  $('#sumBox').innerHTML = `<h2>Kết quả lượt làm bài</h2>
+    <div class="sumbig">${Z.ok}/${Z.total} · ${pct}%</div><p>${msg}</p>
+    ${sb?`<h3>Subunit cần xem lại</h3><div class="row">${sb}</div>`:''}
+    <div class="row" style="margin-top:14px">
+      ${wrongIds.length?`<button class="btn pri" id="redoWrong">Làm lại ${wrongIds.length} câu sai</button>`:''}
+      <button class="btn" id="again">Lượt mới cùng thiết lập</button>
+      <button class="btn" id="toSetup">Về trang Luyện tập</button>
+    </div>
+    ${wrongIds.length?'<h3>Các câu sai</h3>'+wrongIds.map(id=>wrongItem(QM[id])).join(''):''}`;
+  $('#sumBox').classList.remove('hide');
+  if($('#redoWrong')) $('#redoWrong').onclick = () => startQuiz(shuffle(wrongIds.slice()));
+  $('#again').onclick = () => { show('setup'); $('#start').click(); };
+  $('#toSetup').onclick = () => show('setup');
+  bindWrongItems($('#sumBox'));
+  Z = null; updateHeader(); window.scrollTo({top:0});
+}
+document.addEventListener('keydown', e => {
+  if($('#tab-quiz').classList.contains('hide') || !Z || e.target.tagName==='INPUT') return;
+  if(e.ctrlKey || e.metaKey || e.altKey) return; // để Ctrl+C / Cmd+C copy bình thường
+  const map = {'1':'A','2':'B','3':'C','4':'D'};
+  if(map[e.key]) answer(map[e.key]);
+  else if(e.key==='Enter' || e.key==='ArrowRight') next();
+});
+
+// ---------- wrong list ----------
+function wrongItem(q){
+  const s = st(q.id);
+  return `<div class="wl" data-id="${q.id}"><div class="h"><span class="tag">SU ${q.s}</span><span class="s">${esc(q.q.replace(/\s+/g,' '))}</span>${s?`<span class="tag re">✗${s.w}</span>`:''}</div>
+    <div class="b"><div class="stem" style="font-size:14.5px">${stemHTML(q.q)}</div>
+    ${q.o?`<div style="font-size:14px">${['A','B','C','D'].map((k,i)=>`<div style="${k===q.a?'color:var(--ok);font-weight:700':''}">${k}. ${esc(q.o[i])}</div>`).join('')}</div>`:`<div><b>Đáp án: ${q.a}</b></div>`}
+    ${explainHTML(q)}</div></div>`;
+}
+function bindWrongItems(root){ root.querySelectorAll('.wl .h').forEach(h => h.onclick = () => h.parentElement.classList.toggle('open')); }
+function wrongIdsFiltered(){
+  const term = $('#wSearch').value.trim().toLowerCase(), u = $('#wUnit').value, kind = $('#wKind').value;
+  return DB.q.filter(q => { const s=st(q.id); if(!s) return false;
+    if(kind==='wrong' && !s.w) return false; if(kind==='star' && !s.st) return false;
+    if(u!=='all' && String(q.u)!==u) return false;
+    if(term && !q.q.toLowerCase().includes(term)) return false; return true; })
+    .sort((a,b)=> (st(b.id).lw - st(a.id).lw) || (st(b.id).w - st(a.id).w) || a.id-b.id);
+}
+function renderWrong(){
+  const sel = $('#wUnit');
+  if(!sel.options.length){ sel.innerHTML = '<option value="all">Tất cả unit</option>' + UNITS.map(u=>`<option value="${u}">SU ${u}</option>`).join(''); }
+  const list = wrongIdsFiltered();
+  $('#wCount').textContent = `${list.length} câu · sắp xếp: đang sai trước, sai nhiều lần trước. Bấm vào câu để xem đáp án và giải thích.`;
+  $('#wList').innerHTML = list.length ? list.slice(0,300).map(wrongItem).join('') + (list.length>300?`<p class="mute">…hiển thị 300 câu đầu</p>`:'') : '<div class="empty">Chưa có câu nào.</div>';
+  bindWrongItems($('#wList'));
+  $('#wDrill').disabled = !list.length;
+}
+['#wSearch','#wUnit','#wKind'].forEach(s => $(s).addEventListener('input', renderWrong));
+$('#wDrill').onclick = () => { const ids = wrongIdsFiltered().map(q=>q.id); startQuiz(shuffle(ids).slice(0, Math.max(S.opt.size, 20))); };
+
+// ---------- stats ----------
+function renderStats(){
+  const all = unitStats(DB.q.map(q=>q.id));
+  const tot = Object.values(S.days).reduce((a,d)=>a+d.n,0);
+  $('#kpis').innerHTML = [
+    ['Tổng câu', all.n], ['Đã làm', `${all.seen} <small style="font-size:13px">(${Math.round(all.seen/all.n*100)}%)</small>`],
+    ['Đã thuộc (box ≥ 4)', all.mas], ['Đang sai', all.wr], ['Đến hạn ôn', all.due],
+    ['Tỷ lệ đúng', all.acc==null?'–':Math.round(all.acc*100)+'%'], ['Tổng lượt trả lời', tot], ['Chuỗi ngày', streak()]
+  ].map(([l,v])=>`<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join('');
+  const days=[]; for(let i=13;i>=0;i--){ const t=Date.now()-i*DAY; days.push([dkey(t), S.days[dkey(t)]||{n:0,c:0}]); }
+  const mx = Math.max(10, ...days.map(d=>d[1].n));
+  $('#days').innerHTML = days.map(([k,d])=>`<div title="${k}: ${d.c}/${d.n} đúng" style="height:${d.n/mx*100}%"><i style="height:${d.n?d.c/d.n*100:0}%"></i></div>`).join('');
+  $('#dlab').innerHTML = days.map(([k])=>`<span>${k.slice(8)}</span>`).join('');
+  let h = `<tr><th>Study Unit</th><th>Câu</th><th>Đã làm</th><th>Tỷ lệ đúng</th><th class="hm">Đã thuộc</th><th>Đang sai</th><th>Đến hạn</th><th></th></tr>`;
+  UNITS.forEach(u => { const s = unitStats(byUnit[u]);
+    const accCol = s.acc==null?'–':`<span style="color:${s.acc>=.75?'var(--ok)':s.acc>=.6?'var(--warn)':'var(--bad)'};font-weight:700">${Math.round(s.acc*100)}%</span>`;
+    h += `<tr><td><b>SU ${u}</b> <span class="mute hm">${esc(DB.units[u])}</span></td><td>${s.n}</td><td>${s.seen}</td><td>${accCol}</td><td class="hm">${s.mas}</td><td>${s.wr}</td><td>${s.due}</td>
+      <td><button class="btn sm" data-u="${u}">Ôn</button></td></tr>`; });
+  $('#uTable').innerHTML = h;
+  document.querySelectorAll('#uTable button').forEach(b => b.onclick = () => { S.sel.units=[+b.dataset.u]; S.sel.subs=null; S.opt.mode='smart'; save(); show('setup'); });
+  updateHeader();
+}
+
+// ---------- data ----------
+async function download(name, text, type){
+  try{ const dl = window.claude && window.claude.use ? await window.claude.use('downloads') : null;
+    if(dl){ try{ await dl.save({filename:name, data:new Blob([text],{type})}); $('#impMsg').textContent=''; }catch(e){ if(e && e.code!=='declined') $('#impMsg').textContent='Không tải được file ('+(e.code||'lỗi')+').'; } return; }
+  }catch(e){}
+  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([text],{type})); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500); }
+$('#exp').onclick = () => download(`CMA_P1_tien_do_${dkey()}.json`, JSON.stringify(S), 'application/json');
+$('#expCsv').onclick = () => {
+  const rows = [['Thời gian','Excel row','SU','Câu','Kết quả','Đáp án đúng','Box hiện tại','Số lần đúng','Số lần sai']];
+  S.log.forEach(([id,ok,t]) => { const q=QM[id]; const s=st(id)||{}; if(!q) return; rows.push([new Date(t).toLocaleString('vi-VN'), id, q.s, q.n, ok?'Đúng':'Sai', q.a, s.b, s.c, s.w]); });
+  download(`CMA_P1_lich_su_${dkey()}.csv`, '﻿'+rows.map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\r\n'), 'text/csv');
+};
+$('#imp').onchange = e => { const f=e.target.files[0]; if(!f) return; const r=new FileReader();
+  r.onload = () => { try{ const o=JSON.parse(r.result); if(!o.q) throw 0; S=o; load2(); save(); refreshView(); $('#impMsg').textContent='✓ Đã nhập tiến độ ('+Object.keys(S.q).length+' câu có dữ liệu).'; updateHeader(); }catch(err){ $('#impMsg').textContent='✗ File không hợp lệ.'; } };
+  r.readAsText(f); e.target.value=''; };
+function load2(){ S.q ||= {}; cleanSeed(); S.days ||= {}; S.log ||= []; S.sel ||= {units:[],subs:null}; S.opt ||= blank().opt; }
+let resetArm = false;
+$('#reset').onclick = () => {
+  if(!resetArm){ resetArm=true; $('#reset').textContent='Bấm lần nữa để xác nhận xoá'; $('#resetMsg').textContent='Nên xuất file sao lưu trước.'; setTimeout(()=>{resetArm=false; $('#reset').textContent='Xoá tiến độ'; $('#resetMsg').textContent='';},5000); return; }
+  S = blank(); try{localStorage.removeItem(KEY);}catch(e){} save(); refreshView(); resetArm=false; $('#reset').textContent='Xoá tiến độ'; $('#resetMsg').textContent='✓ Đã xoá.'; updateHeader();
+};
+
+
+// ---------- pack mode (5 questions per screen) ----------
+function packN(){ const v = +((S.opt||{}).pack); return v>0 ? v : 5; }
+function renderQ(){ packN()>1 ? renderPack() : renderQ1(); }
+function answer(k){ if(packN()>1) return; answer1(k); }
+function next(){ packN()>1 ? nextPack() : next1(); }
+function excelText(q){
+  const lines = String(q.q||'').split('\n');
+  const pipeOnly = lines.some(l => l.includes(' | '));
+  const L = lines.map(l => { const r = parseRow(l, pipeOnly); return r ? r.cells.join('\t').replace(/^\t/, pipeOnly ? '\t' : '') : l; });
+  L.push(''); (q.o||[]).forEach((o,i) => L.push('ABCD'[i]+'.\t'+String(o).split(' | ').join('\t')));
+  return L.join('\n');
+}
+function copyQ(id, btn){
+  const t = excelText(QM[id]);
+  const done = () => { const o = btn.textContent; btn.textContent = '✓ Đã copy'; setTimeout(()=>btn.textContent=o, 1500); };
+  const fb = () => { const ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy'); done();}catch(e){} ta.remove(); };
+  try{ navigator.clipboard.writeText(t).then(done, fb); }catch(e){ fb(); }
+}
+function qTags(q, it, s){
+  const tags = [`<span class="tag">SU ${q.s} · ${esc(DB.subs[q.s]||'')}</span>`,
+    (q.src ? `<span class="tag" style="background:var(--ok-soft);color:var(--ok)">Mới · Gleim 2025 · câu ${q.n-1000}</span>` : `<span class="tag">Câu ${q.n}</span>`),
+    `<span class="tag">${q.t?'Tính toán':'Lý thuyết'}</span>`];
+  if(it.re) tags.push('<span class="tag re">Hỏi lại câu vừa sai</span>');
+  else if(s && s.lw) tags.push('<span class="tag re">Lần trước sai</span>');
+  if(s && (s.c+s.w)) tags.push(`<span class="tag">Box ${s.b} · ✓${s.c} ✗${s.w}</span>`);
+  if(q.f) tags.push('<span class="tag warn">⚠ Cần đối chiếu</span>');
+  return tags.join('');
+}
+function packStats(){
+  $('#qDone').textContent = Z.done; $('#qTot').textContent = Z.total; $('#qOk').textContent = Z.ok; $('#qBad').textContent = Z.bad;
+  $('#qProg').style.width = (Z.done/Z.total*100)+'%';
+  $('#qLeft').textContent = `Còn ${Z.queue.length - Z.i} lượt hỏi`;
+}
+function renderPack(){
+  const items = Z.queue.slice(Z.i, Z.i + packN()); Z.cur = items; Z.pa = items.map(()=>null);
+  packStats();
+  $('#qCard').innerHTML = items.map((it, j) => { const q = QM[it.id], s = st(q.id);
+    const opts = ['A','B','C','D'].map((k,i) => `<button class="opt" data-p="${j}" data-k="${k}"><span class="k">${k}</span><span>${q.o?esc(q.o[i]):''}</span></button>`).join('');
+    return `<div class="pq" style="${j? 'border-top:2px dashed var(--line);margin-top:18px;padding-top:14px':''}">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div class="qmeta"><span class="tag" style="font-weight:700">${j+1}/${items.length}</span>${qTags(q, it, s)}</div>
+        <div class="row" style="gap:4px"><button class="btn sm" data-copy="${q.id}" title="Copy đề và phương án (bảng tách cột) để dán vào Excel">📋 Copy sang Excel</button>
+        <button class="star ${s&&s.st?'on':''}" data-star="${q.id}" title="Đánh dấu câu này">★</button></div>
+      </div>
+      ${stemBlock(q)}
+      <div class="opts">${opts}</div>
+      <div id="after${j}"></div></div>`; }).join('') +
+    `<div class="qnav"><span class="kbd" id="packInfo">Đã trả lời 0/${items.length} câu trong gói · Enter để sang gói tiếp</span>
+      <button class="btn pri" id="nextBtn" disabled>${items.length} câu tiếp ▶</button></div>`;
+  document.querySelectorAll('#qCard .opt').forEach(b => b.onclick = () => answerP(+b.dataset.p, b.dataset.k));
+  document.querySelectorAll('#qCard [data-copy]').forEach(b => b.onclick = () => copyQ(+b.dataset.copy, b));
+  document.querySelectorAll('#qCard [data-star]').forEach(b => b.onclick = () => { const id=+b.dataset.star; const s2 = S.q[id] || (S.q[id]={b:0,due:0,c:0,w:0,l:null,lw:false,st:0}); s2.st = s2.st?0:1; save(); b.classList.toggle('on', !!s2.st); });
+  $('#nextBtn').onclick = nextPack;
+}
+function answerP(j, k){
+  if(!Z.cur || Z.pa[j]!==null) return;
+  const it = Z.cur[j], q = QM[it.id], ok = k===q.a; Z.pa[j] = k;
+  document.querySelectorAll(`#qCard .opt[data-p="${j}"]`).forEach(b => { b.disabled = true; if(b.dataset.k===q.a) b.classList.add('ok'); if(b.dataset.k===k && !ok) b.classList.add('bad'); });
+  record(q.id, ok);
+  if(!(q.id in Z.first)){ Z.first[q.id] = ok; Z.done++; ok ? Z.ok++ : Z.bad++; }
+  if(!ok){ const reCount = Z.queue.filter(x=>x.id===q.id).length;
+    if(reCount < 2){ const pos = Math.min(Z.queue.length, Z.i + Z.cur.length + Math.floor(Math.random()*3)); Z.queue.splice(pos, 0, {id:q.id, re:true}); } }
+  $('#after'+j).innerHTML = `<div class="res ${ok?'ok':'bad'}"><div class="hd">${ok?'✓ Chính xác':'✗ Chưa đúng · Đáp án đúng: '+q.a}</div>${ok?'':'<span style="font-size:13px">Câu này sẽ được hỏi lại ở gói sau và đưa vào lịch ôn sớm.</span>'}</div>` + explainHTML(q);
+  packStats();
+  const n = Z.pa.filter(x=>x!==null).length;
+  $('#packInfo').textContent = `Đã trả lời ${n}/${Z.cur.length} câu trong gói · Enter để sang gói tiếp`;
+  if(n === Z.cur.length){ $('#nextBtn').disabled = false; $('#nextBtn').textContent = (Z.i + Z.cur.length < Z.queue.length) ? 'Gói tiếp ▶' : 'Xem kết quả ▶'; }
+  updateHeader();
+}
+function nextPack(){
+  if(!Z.cur || Z.pa.some(x=>x===null)) return;
+  Z.i += Z.cur.length; Z.cur = null;
+  if(Z.i >= Z.queue.length) return finish();
+  renderPack(); window.scrollTo({top:0});
+}
+
+// ---------- figures, saved session, quick start on the Quiz tab ----------
+function stemBlock(q){
+  const im = (DB.img||{})[q.id];
+  return '<div class="stem">' + stemHTML(q.q) + '</div>' + (im ? `<div class="qimg"><img src="${im}" alt="Hình minh hoạ của đề" style="max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;margin:2px 0 12px"></div>` : '');
+}
+const KEYZ = KEY + '_session';
+function saveZ(){ try{ if(Z) localStorage.setItem(KEYZ, JSON.stringify({queue:Z.queue, i:Z.i, total:Z.total, done:Z.done, ok:Z.ok, bad:Z.bad, first:Z.first, at:Date.now()})); }catch(e){} }
+function clearZ(){ try{ localStorage.removeItem(KEYZ); }catch(e){} }
+function loadZ(){ try{ const z = JSON.parse(localStorage.getItem(KEYZ)); return (z && z.queue && z.i < z.queue.length && z.queue.every(it => QM[it.id])) ? z : null; }catch(e){ return null; } }
+(function(){
+  const _sq = startQuiz;   startQuiz = function(ids){ _sq(ids); saveZ(); };
+  const _a1 = answer1;     answer1 = function(k){ _a1(k); saveZ(); };
+  const _ap = answerP;     answerP = function(j,k){ _ap(j,k); saveZ(); };
+  const _n1 = next1;       next1 = function(){ _n1(); if(Z) saveZ(); };
+  const _np = nextPack;    nextPack = function(){ _np(); if(Z) saveZ(); };
+  const _fi = finish;      finish = function(){ clearZ(); _fi(); };
+  const _sh = show;        show = function(t){ _sh(t); if(t==='quiz' && !Z) renderQuizEmpty(); };
+})();
+function resumeZ(z){
+  Z = {queue:z.queue, i:z.i, total:z.total, done:z.done, ok:z.ok, bad:z.bad, first:z.first||{}, answered:false};
+  $('#sumBox').classList.add('hide'); $('#quizBox').classList.remove('hide'); $('#quizEmpty').classList.add('hide');
+  show('quiz'); renderQ();
+}
+function renderQuizEmpty(){
+  const box = $('#quizEmpty'); if(!box) return;
+  const size = S.opt.size || 20;
+  const due = DB.q.filter(q => isDue(q.id)).map(q => q.id)
+    .sort((a,b)=>{ const A=st(a),B=st(b); return (B.lw-A.lw) || (B.w-A.w) || (A.due-B.due); });
+  const z = loadZ();
+  const smart = poolFor('smart', DB.q.map(q=>q.id));
+  let h = '<h2 style="margin-top:0">Bắt đầu nhanh</h2><div class="row" style="justify-content:center;gap:10px;flex-wrap:wrap">';
+  if(z) h += `<button class="btn pri" id="qsResume">▶ Làm tiếp lượt dở (đã làm ${z.done}/${z.total})</button>`;
+  if(due.length) h += `<button class="btn ${z?'':'pri'}" id="qsDue">▶ Ôn ngay ${Math.min(size, due.length)} câu đến hạn <span class="mute">(còn ${due.length})</span></button>`;
+  h += `<button class="btn" id="qsSmart">▶ Lượt mới: ${size} câu ôn thông minh (mọi unit)</button></div>`;
+  h += '<p class="mute" style="margin-top:12px;font-size:13px">Muốn chọn unit, chế độ hay số câu riêng thì vào tab <b>Luyện tập</b>.</p>';
+  box.innerHTML = h; box.classList.remove('hide'); $('#quizBox').classList.add('hide');
+  if(z) $('#qsResume').onclick = () => resumeZ(z);
+  if(due.length) $('#qsDue').onclick = () => startQuiz(due.slice(0, size));
+  $('#qsSmart').onclick = () => startQuiz(smart.slice(0, size));
+}
+
+// ---------- init ----------
+function setHH(){ document.documentElement.style.setProperty('--hh', document.querySelector('header').offsetHeight+'px'); }
+window.addEventListener('resize', setHH); setHH();
+load();
+if(!S.sel.units.length) S.sel.units = [1];
+renderSetup();
+setSync('connecting');
+initCloud();
+</script>
+<script>
+const API_URL = "https://script.google.com/macros/s/AKfycbxjjoIiPpYb-UE6NoyAkx4QRtxVJHpXOGpOyBmpoaZzWYtmaJi2HrOuy_mD-CcIRKv9Zg/exec";
+const WRAP = {"hanguyen": {"n": "Hanguyen", "iv": "HrAZr8vhZFu41G43", "ct": "JZp8WrsFJrE82Loqy/Cx0nyVp3pSYRP+bFhQyLY62c8dgPR9OIqckIwhyb8rPzQy"}, "phuongtran": {"n": "Phuongtran", "iv": "Bue6lLbP/x0Qx6cp", "ct": "EQ1LT01Kv8nwMJFyyUZYVepSAm4vc1ZWqUkh94xfnw9K1CABpgmn7wytGkFBjEUS"}};
+const ITER = 150000;
+const AUTHK = 'cmaP1_web_auth';
+const u8 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const s64 = b => btoa(String.fromCharCode(...new Uint8Array(b)));
+async function api(action, extra){
+  const A = window.__AUTH;
+  try{
+    const res = await fetch(API_URL, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify({user:A.u, pass:A.p, action, ...(extra||{})})});
+    return await res.json();
+  }catch(e){ return {ok:false, code:'unavailable'}; }
+}
+async function unwrapKey(uid, pass){
+  const w = WRAP[uid]; if(!w) return null;
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass), 'PBKDF2', false, ['deriveKey']);
+  const wk = await crypto.subtle.deriveKey({name:'PBKDF2', hash:'SHA-256', salt:new TextEncoder().encode('cma-p1|'+uid), iterations:ITER}, base, {name:'AES-GCM', length:256}, false, ['decrypt']);
+  try{ return new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM', iv:u8(w.iv)}, wk, u8(w.ct))); }catch(e){ return null; }
+}
+async function openDB(kraw){
+  const buf = new Uint8Array(await (await fetch('db.bin', {cache:'no-cache'})).arrayBuffer());
+  const k = await crypto.subtle.importKey('raw', kraw, 'AES-GCM', false, ['decrypt']);
+  const gz = await crypto.subtle.decrypt({name:'AES-GCM', iv:buf.slice(0,12)}, k, buf.slice(12));
+  const txt = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+  return JSON.parse(txt);
+}
+async function enter(auth, kraw){
+  const msg = document.getElementById('gMsg');
+  msg.style.color = 'var(--mute)'; msg.textContent = 'Đang tải ngân hàng câu hỏi…';
+  try{ window.__DB = await openDB(kraw); }
+  catch(e){ msg.style.color = ''; msg.textContent = 'Không tải được dữ liệu. Kiểm tra mạng rồi thử lại.'; return false; }
+  window.__AUTH = auth;
+  document.getElementById('gate').remove();
+  const pill = document.createElement('span');
+  pill.className = 'pill who'; pill.title = 'Bấm để đăng xuất';
+  pill.innerHTML = '👤 <b></b> · Đăng xuất'; pill.querySelector('b').textContent = auth.n;
+  pill.onclick = () => { if(confirm('Đăng xuất khỏi ' + auth.n + '?')){ try{ localStorage.removeItem(AUTHK); }catch(e){} location.reload(); } };
+  document.querySelector('.hwrap').appendChild(pill);
+  const s = document.createElement('script'); s.textContent = document.getElementById('appsrc').textContent; document.body.appendChild(s);
+  return true;
+}
+document.getElementById('gForm').onsubmit = async ev => {
+  ev.preventDefault();
+  const msg = document.getElementById('gMsg'), btn = document.getElementById('gBtn');
+  const uid = document.getElementById('gUser').value.trim().toLowerCase(), pass = document.getElementById('gPass').value;
+  btn.disabled = true; msg.style.color = 'var(--mute)'; msg.textContent = 'Đang kiểm tra…';
+  const k = await unwrapKey(uid, pass);
+  if(!k){ btn.disabled = false; msg.style.color = ''; msg.textContent = 'Sai tài khoản hoặc mật khẩu.'; return; }
+  const auth = {u:uid, p:pass, n:WRAP[uid].n};
+  try{ localStorage.setItem(AUTHK, JSON.stringify({...auth, k:s64(k)})); }catch(e){}
+  if(!await enter(auth, k)) btn.disabled = false;
+};
+(async () => {
+  let saved = null; try{ saved = JSON.parse(localStorage.getItem(AUTHK)); }catch(e){}
+  if(saved && saved.u && saved.k && WRAP[saved.u]){ if(!await enter({u:saved.u, p:saved.p, n:WRAP[saved.u].n}, u8(saved.k))) document.getElementById('gMsg').textContent += ''; }
+  else document.getElementById('gUser').focus();
+})();
+</script>
+
+</body></html>
